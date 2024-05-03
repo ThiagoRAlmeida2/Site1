@@ -26,6 +26,15 @@ h1 {
 	padding: 0;
 }
 
+#menu-toggle{
+	display: none;
+}
+
+.menu-icon{
+	margin: 0;
+	padding: 0;
+}
+
 ul.principal {
 	margin: 36px 0 0 0;
 	padding: 0;
@@ -110,7 +119,7 @@ ul.oculto li a {
 }
 
 .blocoFigura figure img {
-	max-width: 100%;
+	width: 100%;
 }
 
 .blocoFigura h2 {
@@ -176,13 +185,13 @@ footer {
 	margin-right: 0;
 }
 
-/*.divRodape:nth-child(odd) {
+.divRodape:nth-child(odd) {
 	background: darkblue;
 }
 
 .divRodape:nth-child(even) {
 	background: darkgreen;
-}*/
+}
 
 .divImagem {
 	text-align: center;
@@ -326,16 +335,34 @@ form {
 
 /*======== MEDIA QUERIES =========*/
 
-/*@media screen and (max-width: 960px) {
-	.container {
-		background: red;
+@media screen and (max-width: 960px) {
+	.container{
+		display: block;
+	}
+	.blocoFigura{
+		display: inline-block;
+		width: 49%;
+		margin-right: 0;
+	}
+	.blocoFigura:first-child {
+		margin-right: 1.5%;
+	}
+	.blocoFigura:last-child {
+		width: 100%
+	}
+	.menu-icon{
+		position: fixed;
+		top: 30px;
+		right: 15px;
 	}
 }
 
 @media screen and (max-width: 724px) {
-	
 }
 
 @media screen and (max-width: 540px) {
-	
-}*/
+	.blocoFigura{
+		width: 100%;
+		margin-right: 0;
+	}
+}
